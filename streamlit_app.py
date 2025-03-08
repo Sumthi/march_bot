@@ -5,7 +5,7 @@ from openai import OpenAI
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # Title of the app
-st.title("Health Symptom Checker")
+st.title("Sumathi's Health Symptom Checker")
 
 # Initialize session state for chat history
 if "messages" not in st.session_state:
@@ -13,7 +13,7 @@ if "messages" not in st.session_state:
 
 # Display chat history
 for message in st.session_state.messages:
-    role, content = message["role"], message["Testing_Sumathi"]
+    role, content = message["role"], message["content"]
     with st.chat_message(role):
         st.markdown(content)
 
